@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pike Elite shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Pike: your best version</h1>
+    <img id="Pike" src="imagenes/PikeLogo.jpg">
+    <p id="loresito">Su MEJOR OPCION del dia a dia a la compra de zapatos, cualquier tipo, venga venga ya, si necesita zapatos para un evento aqui van a estar, llamenos.</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>Productos</h2>
+
+        <div class="controles-busqueda">
+            <input
+                type="text"
+                id="buscador"
+                placeholder="Que busca?"
+            >
+
+            <select id="ordenar" aria-label="Ordenar productos por precio">
+                <option value="original">Ordenar productos</option>
+                <option value="mayor">Precio mayor</option>
+                <option value="menor">Precio menor</option>
+            </select>
+        </div>
+
+        <div id="productos"></div>
+        <div class="barra-tienda">
+            <div class="carrito">
+                <h2>🛒</h2>
+                <ul id="lista"></ul>
+                <p>
+                    <strong>
+                        Total: <span id="total">₡0</span>
+                    </strong>
+                </p>
+            </div>
+
+            <div class="acciones-tienda">
+                <label for="moneda">Moneda:</label>
+                <select id="moneda" aria-label="Seleccionar moneda">
+                    <option value="CRC">₡ Colones</option>
+                    <option value="USD">$ Dólares</option>
+                </select>
+
+                <button onclick="cambiarTema()">
+                    🌓
+                </button>
+
+                <button onclick="window.location.reload()">
+                    Cancelar todo
+                </button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    @pike2026 - Puede encontrarnos en Heredia Centro
+</footer>
+
+<script src="index.js"></script>
+
+</body>
+</html>
